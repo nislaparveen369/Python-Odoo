@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>btnValue</title>
+</head>
+<body>
+
+    <form name="form" id="form" onsubmit="return false">
+        <button name="button" id="time" onclick="changeTime();" value="before" >Show Time</button>
+        <button name="button" id="location" onclick="changeLocation();" value="before" >Show Location</button>
+        <button name="button" id="date" onclick="changeDate();" value="before" >Show Date</button>
+    </form>
+    
+    <script type="text/javascript">
+        var x = document.getElementById("location");
+
+    function changeDate() {
+        n= new Date();
+        y = n.getFullYear();
+        m = n.getMonth() + 1;
+        d = n.getDate();
+        document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
+    }
+    function changeTime() {
+        n= new Date();
+        hr = n.getHours();
+        min = n.getMinutes() ;
+        sec = n.getSeconds();
+        document.getElementById("time").innerHTML = hr + ":" + min + ":" + sec;
+    }
+    function changeLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+    }
+
+    function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+    }
+    </script>
+</body>
+</html>

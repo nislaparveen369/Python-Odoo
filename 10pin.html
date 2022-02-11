@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pin Number</title>
+
+	
+</head>
+
+<body>
+<h1>Enter pin number</h1>
+<input type="submit" id="submitguess" value="generate" onclick="function()">
+
+<script type = "text/javascript">
+  
+	// random value generated
+
+	
+	// counting the number of guesses
+	// made for correct Guess
+	
+	document.getElementById("submitguess").onclick = function(){
+    
+    var r = Math.floor(1000+Math.random() *9000);
+    console.log(r);
+    var guess = prompt("Enter pin number:");
+    var counter = 0;  
+    while(counter<=4){
+      
+      var newGuess = parseInt(guess);
+   
+      if(newGuess === r){
+        alert("Great guess! That is the number. It took you " + counter + "tries!");
+        break;    
+      }
+      else {
+        var guess = prompt("Sorry that was wrong   Enter pin number:");
+           
+        continue;
+      }  
+       
+      counter=counter+1;
+    }
+    
+  }
+</script>
+</body>
+</html>					

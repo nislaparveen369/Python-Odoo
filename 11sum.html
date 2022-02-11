@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sum</title>
+</head>
+<body>
+    <label>number </label>
+    <input type="number" name="number" id="number" placeholder="enter a number" value="" onchange="sum()"> 
+    <script>
+        function sum(){
+        var N=document.getElementById("number").value;
+        var sum = 0;
+        var i=1;
+        while(i<=N){
+            sum+=i;
+            i++;    
+        }
+        document.write("Sum Of First "+N+" Natural Numbers : " + sum);
+        } 
+    </script>
+
+
+
+</body>
+</html>

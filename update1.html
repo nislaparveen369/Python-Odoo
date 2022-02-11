@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <script src="update1.js"></script>
+    
+<head>
+<title>update1</title>
+<style>
+ #current{
+   opacity: 0;
+ }
+  table, th, td{
+    border: solid 0.5px;
+    border-width: none;
+    border-color: grey;
+    border-collapse: collapse;
+    text-align: left;
+   
+   
+    
+    
+  }
+  th,td{
+    width: 4cm;
+    padding-left: 10px;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+  }
+  th{
+    background-color: yellow;
+  }
+  
+  td{
+    background-color: white;
+    
+  }
+  table{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    
+  }
+  body{
+    background-color: #edeae1;
+  }
+  #button1{
+   margin-left: 650px;
+   margin-top: 15px;
+  }
+</style>
+</head>
+<body>
+  
+    <table>
+      
+        <tr>
+          <th >Current Date</th>
+          <th>Current Time</th>
+          <th>Current Latitude</th>
+          <th>Current Longitude</th>
+          
+        </tr>
+        
+        <tr id="current">
+          <td id="date"></td>
+          <td id="time"></td>
+          <td id="latitude">Table</td>
+          <td id="longitude">Table</td>
+        </tr>
+        
+        
+      </div>
+    </table>
+    
+  </div>
+  <div id="button1">
+    <button onclick="myFunction()">Show</button>
+  </div>
+
+
+
+</body>
+</html>

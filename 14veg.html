@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+   <title>Fruit or Vegetable</title>
+</head>
+<body>
+    
+   <button onclick="checkExistence()">Check fruit or vegetable</button>
+   <p id='result'></p>
+   <script>
+      const fruit = [ 'mango', 'orange','apple'];
+      const veg = ['tomato', 'potato'];
+      const checkExistence = () => {
+         const userInput = prompt("enter a fruit or vegtable")
+         const exists = fruit.includes(userInput);
+         const vegetable = veg.includes(userInput);
+         if(exists==true){
+             alert(`fruit`);
+         }
+         else if(vegetable==true){
+             alert('vegetable');
+         }
+         else{
+             alert(`incorrect`);
+         }
+      };
+   </script>
+   
+</body>
+</html>

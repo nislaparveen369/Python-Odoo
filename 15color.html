@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>15 color</title>
+</head>
+<body>
+    <style>
+        #color{
+            width: 100px;
+            height: 100px;
+            opacity: 0;
+            background-color: black;
+            margin-left:100px;
+            margin-top: 100px;
+        }
+        
+    </style>
+    <label for="fruit">Choose a fruit or vegetable:</label>
+
+    <select id="mySelect" onchange="myFunction()">
+        <option value="select">Select</option>
+        <option value="apple">apple</option>
+        <option value="tomato">tomato</option>
+        <option value="orange">orange</option>
+        <option value="banana">banana</option>
+        <option value="grapes">grapes</option>
+    </select>
+    <div id="color">
+    </div>
+
+<script>
+    function myFunction(){
+        
+        var s=document.getElementById("mySelect");
+        var v=s.value;
+        if(v=="apple"){
+            document.getElementById("color").style.opacity=1;
+            document.getElementById("color").style.backgroundColor="#b50202";    
+        }
+        else if(v=="tomato"){
+            document.getElementById("color").style.opacity="1";
+            document.getElementById("color").style.backgroundColor="#d10d0d";    
+        }
+        else if(v=="orange"){
+            document.getElementById("color").style.opacity="1";
+            document.getElementById("color").style.backgroundColor="#ed3d0c";    
+        }
+        else if(v=="banana"){
+            document.getElementById("color").style.opacity="1";
+            document.getElementById("color").style.backgroundColor="yellow";    
+        }
+        else if(v=="grapes"){
+            document.getElementById("color").style.opacity="1";
+            document.getElementById("color").style.backgroundColor="#3d112b";    
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>String</title>
+</head>
+<body>
+    <style>
+        #M{
+            opacity: 0;
+        }
+    </style>
+    <form>
+        <div>
+          <label for="uname">Enter a string: </label>
+          <input type="text" id="uname" name="name" value="">
+          <input type="text" id="M" name="name" value="M">
+        </div>
+        <div>
+          <button onclick="check()">Submit</button>
+        </div>
+    </form>
+    
+    <script>
+        function check(){
+        // program to check if a string contains the letter M
+
+    // take input
+    const str= document.getElementById("uname").value;
+    
+    
+    // check if string contains the letter M
+   
+    var pos = str.indexOf("M");
+
+    while(pos > -1){
+        alert(`yes`); 
+        break;
+    }  
+    alert(`No`); 
+        
+} 
+    </script>
+
+</body>
+</html>

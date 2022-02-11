@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Parag4</title>
+</head>
+<body>
+
+
+<p id="pText">This is  paragraph  </p>
+<input type="text" id="myText" onChange="insertText()" value="">
+
+
+<script>
+function insertText(){
+    var x=document.getElementById("myText").value;
+    document.getElementById("pText").innerText= document.getElementById("myText").value;
+} 
+
+</script>
+
+
+
+</body>
+</html>

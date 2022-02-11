@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>7 Num</title>
+</head>
+<body>
+    <style>
+       #main{
+           display: block;
+       }
+    </style>
+    <div class="container-fluid">
+        <header>
+            <div id="main">
+            <h1>Odd or Even</h1>
+        </header>
+    
+        <label>number 1</label>
+        <input type="number" name="number1" id="number1" placeholder="enter a number" value=""> <br>
+        <!--+<br>-->
+        
+        <button type="button" class="btn btn-info" onclick="submit1()">submit</button><br><br>
+        <div class="screen" id="screen1">
+            
+        </div>
+    </div>
+    
+    
+    </div> <!-- End Container-->
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+
+    
+    <script>
+    $( document ).ready(function() {
+    
+    });
+    
+    
+    function submit1(){
+        document.getElementById("main").style.display="block";
+        var digits=[];
+        var number = document.getElementById("number1").value;    
+        var digits = (""+number).split("");
+        v=digits.length-1;
+        for(var i=0;i<=v;i++){   
+                 
+            if(digits[i]%2==0){                   
+                document.write(digits[i]+" is even  "+"<br>");      
+            }
+            else{    
+                document.write(digits[i]+" is odd  "+"<br>");    
+            } 
+                  
+        }
+    
+    }
+    
+    </script>
+</body>
+</html>
