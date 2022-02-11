@@ -1,0 +1,49 @@
+.slide-right {
+  animation: 2s slide-right;
+}
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+.button-slide{
+  cursor: pointer;
+  /* box-shadow: inset 0 0 0 0 #D80286; */
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.5s;
+}
+
+.shop-btn{
+  color:white;
+  background-color: grey;
+  border: none;
+  
+}
+.shop-btn:hover{
+  box-shadow: inset 400px 0 0 0 red;
+}
+
+.zoom-in-zoom-out {
+    /* margin: 24px;
+    width: 50px;
+    height: 50px;
+    background: green; */
+    animation: zoom-in-zoom-out 2s ease-out infinite;
+  }
+  
+  @keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.1, 1.1);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }

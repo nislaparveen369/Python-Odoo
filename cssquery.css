@@ -1,0 +1,113 @@
+@media all and (min-width: 300px) {
+    #main{
+      background-color: rgb(230, 48, 16);
+      height: 100vh;
+      padding: 15px 15px 15px 15px;
+    
+    }
+    #second-main{
+        background-color: rgb(230, 84, 16);
+        margin: 10px 10px 4vh;
+        padding: 10px 10px 15px 10px;
+        height: 94vh;
+    }
+    
+    
+    #head{
+        
+        background-color: rgb(223, 144, 108);
+        margin: 10px;
+        height: 10vh;
+        text-align: center;
+        color: white;
+        padding-top: 1px;
+    
+    }
+    #nav-main{
+        display: inline;
+       
+        margin: 10px;
+        
+        height: 10vh; 
+        list-style-type: none;   
+        padding-bottom: 2px;  
+       
+        
+    }
+    #nav{
+        background-color: rgb(223, 144, 108);
+    }
+    
+        
+    
+    #photo{
+        height: 7vh;
+    }
+    
+    .list{
+        display: inline;
+        background-color: white;
+        float: left;
+        height: 7vh;
+        width: 14%;
+        text-decoration: none;
+       
+        margin-right: 0.25cm;
+        text-align: center;  
+        align-content: center; 
+        padding-top: 2px;        
+    }
+   
+    
+    #article{
+        background-color: rgb(199, 129, 96);
+        margin: 10vh 10px 10px;
+        height: 50vh;  
+        padding: 10px 10px 10px 10px;     
+    }
+    .heading{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+    }
+    .section{
+        background-color: white;
+        width: 53%;
+        float: left;
+        margin-right: 10px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+    .aside{
+        background-color: white;
+        float: left;
+        width: 40%;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    
+    }
+    #para{
+        float:right;
+        width: 90%;
+        margin-left: 5px;
+        margin-right: 15px;
+        
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+    }    
+    
+    #footer{
+        background-color: rgb(223, 144, 108);
+        margin-left: 10px;
+        
+        height: 10vh;   
+        text-align: center;
+        color: white; 
+        padding-top: 1px;
+    }
+}  
