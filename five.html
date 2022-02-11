@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>five</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("select.data").change(function(){
+        var selectedData = $(this).children("option:selected").val();
+        if(selectedData=="loc"){
+            text = $('#l').text();
+            
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else { 
+                text = "Geolocation is not supported by this browser.";
+            }
+            
+        
+            function showPosition(position) {
+                text= "Latitude: " + position.coords.latitude + "  Longitude: " + position.coords.longitude;
+                $("#l").text(text);
+                
+                
+            }
+        }
+        else if(selectedData=="date"){
+            
+            n= new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            $("#d").text(d + "/" + m + "/" + y)
+        }
+        else if(selectedData=="time"){
+            n= new Date();
+            hr = n.getHours();
+            min = n.getMinutes() ;
+            sec = n.getSeconds();
+            $("#t").text(hr + ":" + min + ":" + sec);
+        }
+    });
+});
+</script>
+</head> 
+<body>
+    <form style="margin: 50px;">
+        <label>Select</label>
+        <select class="data">
+            <option value="opt">options</option>
+            <option value="loc">Location</option>
+            <option value="date">Date</option>
+            <option value="time">Time</option>
+        </select>
+    </form>
+    <div style="margin:50px;padding: 20px;">
+        <button id="l">Location</button>
+        <button id="d">Date</button>
+        <button id="t">Time</button>
+    </div>
+</body>
+</html>

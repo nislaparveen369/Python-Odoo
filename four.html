@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>four</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        label {
+            margin: 0 10px 0 0;
+            font-size:12px;
+          }
+          
+          input {
+            border:1px solid #000;
+            padding: 5px;
+          }
+          
+          h1 {
+            margin: 100px auto;
+            text-align:center;
+          }
+    </style>
+    
+    <label>Color</label>
+    <input id="changer"/>
+      
+    
+    <h1>Change the color of text</h1>
+   <script>
+    $("#changer").keyup(function(){
+        $("h1").css("color", ""+$("#changer").val()+"");
+    });
+    
+   </script>
+</body>
+
+</html>

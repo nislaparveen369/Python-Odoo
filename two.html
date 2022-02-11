@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>two</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        
+        .card{
+        border: 1px solid black;
+        width:380px; 
+        margin: 20px;
+        padding: 10px;
+        float: left;
+        height: 200px;
+        
+        } 
+         
+    </style>
+      
+    <div class="card" id="c1">
+      <h3>python</h3>
+    </div>
+    <div class="card" id="c2">
+      <h3>php</h3>
+    </div>
+    <div class="card" id="c3">
+      <h3>java</h3>
+    </div><br>
+<p style="margin:20px;"></p>
+ 
+<script>
+$(document).ready(function(){
+  $(".card").click(function(){
+    var id=$(this).attr('id');
+    if(id=="c1"){
+      var d=$("#c1").text()
+      $( "p" ).text(d);
+    }
+    if(id=="c2"){
+      var d=$("#c2").text()
+      $( "p" ).text(d);
+    }
+    if(id=="c3"){
+      var d=$("#c3").text()
+      $( "p" ).text(d);
+    }
+  })
+})
+</script>
+ 
+</body>
+
+</html>
+
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>one</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    
+   <p>This is paragraph <span id="inc">0</span></p>
+   <button id="button">submit</button>
+   <script>
+    $('#button').on("click", function(){
+        $('#inc').text(function(i,oldVal ){
+           return parseInt(oldVal ,10) + 1 ;
+        });
+   });
+   </script>
+</body>
+
+</html>

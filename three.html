@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>three</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        
+        .card{
+        border: 1px solid black;
+        width:380px; 
+        margin: 20px;
+        padding: 10px;
+        float: left;
+        height: 200px;
+        background-color: red;
+        
+        }      
+    </style>
+    
+    <div class="card">
+        <h3 id="c">Welcome to jquery</h3>
+    </div>
+    
+   <script>
+    $(document).ready(function(){
+        $(".card").click(function(){  
+            $(".card").css("background-color", "green");
+            $("#c").text(function () {
+                return $(this).text().replace("Welcome to jquery", "Thankyou"); 
+                
+            })  
+            $(".card").click(function(){
+                $(".card").hide();
+            })      
+        })
+             
+    });
+   </script>
+</body>
+
+</html>

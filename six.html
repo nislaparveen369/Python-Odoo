@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>six</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+       .circle{
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          display: inline-block;
+          margin: 50px;
+       }
+       .card{
+         height: 100px;
+         width: 100px;
+         display: inline-block;
+         margin: 50px;  
+       }
+    </style>
+
+    <div>
+      <span class="circle" id="c1" style="background-color: green;">
+         <div id="n1" class="number" style="padding: 30px;">
+            500
+         </div>
+      </span>
+      <span class="circle" id="c2" style="background-color: blue;">
+         <div id="n2" class="number" style="padding: 30px;">
+            100
+         </div>
+      </span>
+      <span class="circle" id="c3" style="background-color: red;">
+         <div id="n3" class="number" style="padding: 30px;">
+            400
+         </div>
+      </span>
+      <br>
+      <div class="card">
+         <p id="green"></p>
+      </div>
+      <div class="card">
+         <p id="blue"></p>
+      </div>
+      <div class="card">
+         <p id="red"></p>
+      </div>
+
+      <input type="text">
+      <button type="button">Clear</button>
+    </div>
+   
+   <script>
+    var sum=0;
+    $(document).ready(function(){
+       $("input").change(function(){
+         var t=$("input").val()
+         var a="green";
+         var b="blue";
+         var c="red";
+         if(a==t){
+            var l=$("#n1").text();
+            sum=parseInt(sum)+parseInt(l);
+            $("#green").text(sum);
+         }
+         else if(b==t){
+            var l=$("#n2").text();
+            sum=parseInt(sum)+parseInt(l);
+            $("#blue").text(sum);
+         }
+         else if(c==t){
+            var l=$("#n3").text();
+            sum=parseInt(sum)+parseInt(l);
+            $("#red").text(sum);
+         }
+       })
+       
+    });
+    $("button").click(function(){
+      $("#green").empty();
+      $("#blue").empty();
+      $("#red").empty();   
+    });
+
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<title>nine</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<body>
+
+
+<div class="w3-col s4 ">
+<div class="w3-container w3-blue w3-card">
+  <h2>Input Form</h2>
+</div>
+<form class="w3-container w3-card">
+  <p>
+  <label>First Name</label>
+  <input class="w3-input" type="text" id="first_name"></p>
+  <p>
+  <label>Last Name</label>
+  <input class="w3-input" type="text" id="last_name"></p>
+  <p>
+  <label>Employee ID</label>
+  <input class="w3-input" type="text" id="email"></p>
+  <label>Salary</label>
+  <input class="w3-input" type="number" id="number"></p>
+  <P><button type="button" class="w3-btn w3-blue" id="save">Submit</button>
+</form>
+<br>
+<table class="w3-table-all" id="myTable">
+<thead>
+<tr class="w3-blue">
+<th nowrap>Sl.No</th>      
+<th nowrap>First Name</th>      
+<th nowrap>Last name</th>
+<th nowrap>Email</th>
+<th nowrap>Salary</th>
+<th nowrap>Action</th>
+</tr>
+</thead>
+<tbody >
+</tbody>
+</table>
+</div>
+<script type="text/javascript">
+$('#save').on('click', function() {
+var first_name=$('#first_name').val();
+var last_name=$('#last_name').val();
+var email=$('#email').val();
+var salary=$('#number').val();
+var count = $('#myTable tr').length;
+if(first_name!="" && last_name !="" && email!="" && salary!=""){
+$('#myTable tbody').append('<tr class="child"><td>'+count+'</td><td>'+first_name+'</td><td>'+last_name+'</td><td>'+email+'</td><td>'+salary+'</td><td><a href="javascript:void(0);" class="remCF1 btn btn-small btn-danger">Remove</a></td></tr>');
+}
+});
+$(document).on('click','.remCF1',function(){
+$(this).parent().parent().remove();
+$('#myTable tbody tr').each(function(i){            
+ $($(this).find('td')[0]).html(i+1);          
+});
+});
+</script>
+</body>
+</html>
+

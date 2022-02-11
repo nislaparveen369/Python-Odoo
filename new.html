@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>new</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    
+
+.button-delete{
+  background-color: #FFDDDB;
+  border: 1px solid grey;
+  color: grey;
+  height: 1em;
+  width: 1em;
+  text-align: center;
+  line-height: 0.9em;
+  border-radius: 0.5em;
+  &:before{
+    content: "-";
+  }
+}
+
+.button-add{
+  background-color: #E4FFE5;
+  border: 1px solid grey;
+  color: grey;
+  height: 1em;
+  width: 1em;
+  text-align: center;
+  line-height: 0.9em;
+  border-radius: 0.5em;
+  &:before{
+    content: "+";
+  }
+}
+table, th, td{
+    border: solid 0.5px;
+    border-width: none;
+    border-color: grey;
+    border-collapse: collapse;
+    text-align: left;
+}
+</style>
+</head>
+<body>
+    <form action="">
+        <label for="fname">First name:</label><br>
+        <input type="text" class="fname" name="fname" value=""><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" class="lname" name="lname" value=""><br>
+        <label for="eid">Employee ID:</label><br>
+        <input type="text" class="eid" name="employee ID" value=""><br>
+        <label for="salary">Salary:</label><br>
+        <input type="number" class="salary" name="salary" value=""><br><br>
+        
+    </form>  
+    <button id="btn">Submit</button>
+    
+    
+    <table id="this-table" class="sortable-table">
+        <thead>
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Employee ID</td>
+                <td>Salary</td>
+            </tr>
+        </thead>
+        
+        
+    </table>
+
+   
+   <script>
+    $(document).ready(function () {
+        
+    
+       
+        $("#btn").click(function(){
+            $("table").css("opacity", "1");
+
+            
+            
+            
+            var t=$(".fname").val()
+            
+            var u=$(".lname").val()
+            
+            var v=$(".eid").val()
+            
+            var w=$(".salary").val()
+            
+
+            var tableObject = [t, u ,v, w];
+            
+            $('table').append('<tr></tr>');
+            
+  
+            $(tableObject).each(function(i){
+                $('table tr:last-of-type').append('<td>' + tableObject[i] + ' ' +  [i] + '</td>')
+              });
+              
+        })
+        
+    });
+    
+   </script>
+</body>
+
+</html>
